@@ -1,0 +1,2 @@
+obj\Debug\net6.0/ReaderService.cs \
+obj\Debug\net6.0/ReaderServiceGrpc.cs: ../GRPC.Demo.Server/Protos/ReaderService.proto

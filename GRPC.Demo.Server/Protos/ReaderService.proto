@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcDemo.Services";
+
+service ReaderService {
+	rpc SendMessage(ReaderMessage) returns (ReaderResponse);
+	rpc ClientStreamSendMessage(stream ReaderMessage) returns (ReaderResponse);
+	rpc ServerStreamSendMessage(ReaderMessage) returns (stream ReaderResponse);
+	rpc BiStreamSendMessage(stream ReaderMessage) returns (stream ReaderResponse);
+}
+
+message ReaderMessage {
+	string Message = 1;
+}
+
+message ReaderResponse {
+	string Message = 1;
+}

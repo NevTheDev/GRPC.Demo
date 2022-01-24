@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Protos\ReaderService.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.42.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\ReaderService.proto" GrpcServices="Server" ProtoRoot="Protos/" />
+  </ItemGroup>
+
+</Project>
